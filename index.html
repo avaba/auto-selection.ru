@@ -7,32 +7,33 @@
 	<meta name="description"  content="На подбор автомобиля вы потратите не более 2-х часов. Мы найдем лучший вариант в течение недели, и Вам не придется тратить время на нечестных продавцов и их автомобили. Защита от обмана. Используя наши услуги вы не рискуете нарваться на перекупа, мошенников и прочий «развод». Получаете полное понимание технического состояния и уверенность в автомобиле, а также спокойствие на всех этапах сделки. " />
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/media.css">
 </head>
 <body>
 
 	<header class="head">
 		<div class="container">
 			<div class="row align-items-center">
-				<div class="col-md-2">
+				<div class="col-lg-2 col-sm-4 col-4">
 					<div class="logo">
 						<a href="/"><img src="img/logo.png" alt="Лого"></a>
 					</div>
 				</div>
-				<div class="col-md-6">
+				<div class="col-md-6 hide">
 					<nav class="menu">
 						<ul>
-							<li><a href="#">Услуги</a></li>
-							<li><a href="#">Что мы выполняем</a></li>
-							<li><a href="#">Наши работы</a></li>
-							<li><a href="#">О нас</a></li>
-							<li><a href="#">Этапы работы</a></li>
+							<li><a href="#land1">О нас</a></li>
+							<li><a href="#land2">Услуги</a></li>
+							<li><a href="#land3">Почему автопотбор</a></li>
+							<li><a href="#land4">Цены</a></li>
+							<li><a href="#land5">Этапы работы</a></li>
 						</nav>
 					</ul>
 				</div>
-				<div class="col-md-4">
+				<div class="col-lg-4 col-sm-8 col-8">
 					<div class="head__link">
 						<a class="phone" href="tel:88005553535"><i class="fa fa-phone" aria-hidden="true"></i> 8 800 555 35 35</a>
-						<a href="#popupp" class="call">Заказать звонок</a>
+						<a href="#popupp" class="fancybox call">Заказать звонок</a>
 					</div>
 				</div>
 			</div>
@@ -44,12 +45,12 @@
 			<div class="flex__auto">
 				<div class="container">
 					<div class="row">
-						<div class="col-md-5">
+						<div class="col-xl-5 col-lg-6">
 							<div class="composition">
 								<span class="dream">Управляй автомобилем своей мечты</span>
 								<h1>Быстрый подбор автомобиля</h1>
 								<p class="dec">Поможем найти наилучший авто с пробегом в Москве и области с гарантией по договору. Наша работа и цель нашего дела в том, чтобы уберечь Вас от автохлама, потери денег и нервов.</p>
-								<a href="#popupp" class="popupp">Оставить заявку</a>
+								<a href="#popupp" class="fancybox popupp">Оставить заявку</a>
 							</div>
 						</div>
 					</div>
@@ -59,25 +60,25 @@
 		<span class="ui-bot-figure"></span>
 	</section>
 
-	<section class="about block">
+	<section id="land1" class="about block">
 		<div class="container">
 			<div class="row align-items-center">
-				<div class="col-md-6">
+				<div class="col-lg-6 hide">
 					<img src="img/about.jpg" alt="">
 				</div>
-				<div class="col-md-5 offset-md-1">
+				<div class="col-lg-5 offset-lg-1">
 					<h2>Преимущества выбора автоподбора</h2>
 					<p>Самостоятельно выбрать автомобиль с пробегом если вы не являетесь специалистом очень трудно. Автоподбор – услуга, предоставляемая авто экспертами тем, кто хочет выгодно купить поддержанный автомобиль, сэкономить свои деньги, время, нервы и знать, что обладание им не повлечет за собой неприятностей.</p>
 
 					<p>Узнайте <b>за 1 минуту</b> о преимуществах автоподбора в сравнение с самостоятельным выбором. Покупая автомобиль, доверяйте его поиски профессионалам.</p>
 
-					<a href="#popupp" class="popupp">Подобрать автомобиль</a>
+					<a href="#popupp" class="fancybox popupp">Подобрать автомобиль</a>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<section class="test block">
+	<section id="land2" class="test block">
 		<span class="ui-top-figure"></span>
 		<div class="container">
 			<h2>Что мы проверяем</h2>
@@ -260,13 +261,18 @@
 		</div>
 	</section>
 
-	<section class="qesion">
+	<section id="land3" class="qesion">
 		<div class="container">
 			<div class="b-subscribe clearfix">
 				<div class="b-subscribe__title">Бесплатная консультация</div>
 				<form class="b-subscribe__form">
 					<div class="form-group">
-						<input class="b-subscribe__input" type="email" placeholder="Ваш номер телефона" required="">
+						<!-- Hidden Required Fields -->
+						<input type="hidden" name="project_name" value="Автоподбор">
+					<input type="hidden" name="admin_email" value="seo.er@mail.ru">
+					<input type="hidden" name="form_subject" value="Заявка с сайта - Автоподбор">
+						<!-- END Hidden Required Fields -->
+						<input class="b-subscribe__input wpcf7-tel" type="tel" name="Телефон" placeholder="Ваш номер телефона" required="">
 						<button class="b-subscribe__submit"><i class="ic fa fa-paper-plane-o"></i></button>
 					</div>
 				</form>
@@ -276,7 +282,7 @@
 			<div class="bg">
 				<div class="container">
 					<div class="row">
-						<div class="col-md-4">
+						<div class="col-xl-4 col-lg-5">
 							<div class="answer">
 								<div class="answer__title">
 									9 <span>из</span> 10
@@ -289,7 +295,7 @@
 								</ul>
 							</div>
 						</div>
-						<div class="col-md-5 offset-md-3">
+						<div class="col-xl-5 offset-xl-3 col-lg-5 offset-lg-1">
 							<h2>Почему подбор авто - это выгодно?</h2>
 							<p>Мы проверим Ваш автомобиль и подберем для Вас лучший вариант!</p>
 							<ul>
@@ -307,7 +313,7 @@
 		</div>
 	</section>
 
-	<section class="service block">
+	<section id="land4" class="service block">
 		<div class="container">
 			<h2>Наши услуги</h2>
 
@@ -322,7 +328,7 @@
 							<span class="opis">
 								Выездная диагностика одного или нескольких автомобилей перед покупкой. Проверка документов, кузова, технического состояния, компьютерная диагностика ЭБУ, юридической чистоты, тест-драйв, торг, помощь в составлении ДКП.
 							</span>
-							<a href="#popupp" class="popupp">Заказать</a>
+							<a href="#popupp" class="fancybox popupp">Заказать</a>
 						</div>
 					</div>
 				</div>
@@ -336,7 +342,7 @@
 							<span class="opis">
 								Наш авто-эксперт будет сопровождать Вас в течении дня на личном автомобиле (10:00-21:00). Из числа понравившихся Вам автомобилей поможет выбрать достойный вариант, даст советы и рекомендации к покупке.
 							</span>
-							<a href="#popupp" class="popupp">Заказать</a>
+							<a href="#popupp" class="fancybox popupp">Заказать</a>
 						</div>
 					</div>
 				</div>
@@ -350,7 +356,7 @@
 							<span class="opis">
 								Найдем наилучший автомобиль по заданным Вами критериям поиска. Проверим по всем параметрам. Вам не придется тратить время и нервы на поиск авто, волноваться за его техническую и юридическую чистоту. Берем на автоподбор несколько марок и моделей автомобилей
 							</span>
-							<a href="#popupp" class="popupp">Заказать</a>
+							<a href="#popupp" class="fancybox popupp">Заказать</a>
 						</div>
 					</div>
 				</div>
@@ -364,7 +370,7 @@
 							<span class="opis">
 								Проверка нового автомобиля перед выдачей на предмет кузовного ремонта, исправности электрооборудования и технической части
 							</span>
-							<a href="#popupp" class="popupp">Заказать</a>
+							<a href="#popupp" class="fancybox popupp">Заказать</a>
 						</div>
 					</div>
 				</div>
@@ -378,7 +384,7 @@
 							<span class="opis">
 								Выкупим Ваш авто дороже чем Вам предложат в дилерских центрах. сделаем Вам предложение от которого будет сложно отказаться.
 							</span>
-							<a href="#popupp" class="popupp">Заказать</a>
+							<a href="#popupp" class="fancybox popupp">Заказать</a>
 						</div>
 					</div>
 				</div>
@@ -392,7 +398,7 @@
 							<span class="opis">
 								Проверка грузовых авто перед покупкой.
 							</span>
-							<a href="#popupp" class="popupp">Заказать</a>
+							<a href="#popupp" class="fancybox popupp">Заказать</a>
 						</div>
 					</div>
 				</div>
@@ -406,7 +412,7 @@
 							<span class="opis">
 								Мотоподбор и проверка перед покупкой.
 							</span>
-							<a href="#popupp" class="popupp">Заказать</a>
+							<a href="#popupp" class="fancybox popupp">Заказать</a>
 						</div>
 					</div>
 				</div>
@@ -420,7 +426,7 @@
 							<span class="opis">
 								Проверка коммерческих авто перед покупкой.
 							</span>
-							<a href="#popupp" class="popupp">Заказать</a>
+							<a href="#popupp" class="fancybox popupp">Заказать</a>
 						</div>
 					</div>
 				</div>
@@ -434,7 +440,7 @@
 							<span class="opis">
 								Проверка юридической чистоты на ограничения, историю автомобиля, по всем базам, включая платные. Отчет до 10 мин.
 							</span>
-							<a href="#popupp" class="popupp">Заказать</a>
+							<a href="#popupp" class="fancybox popupp">Заказать</a>
 						</div>
 					</div>
 				</div>
@@ -443,7 +449,7 @@
 		</div>
 	</section>
 
-	<section class="section-wrapper etapy">
+	<section id="land5" class="section-wrapper etapy">
 		<div class="container">
 			<h3>Как мы работаем?</h3>
 			<div class="bg-dotted">
@@ -456,7 +462,7 @@
 						8 800 555-35-35 <br>
 						или оставляете заявку.
 						<div class="clear"></div>
-						<a href="#popupp" class="popupp">Оставьте заявку</a>
+						<a href="#popupp" class="fancybox popupp">Оставьте заявку</a>
 					</div>
 					<div class="items2 fadeIn">
 						<div class="circle">2</div>
@@ -524,6 +530,44 @@
 		</div>
 	</footer>
 
+	<div style="display:none" class="fancybox-hidden">
+		<div id="popupp">
+			<div class="popupp-form">
+				<form>
+					<!-- Hidden Required Fields -->
+					<input type="hidden" name="project_name" value="Автоподбор">
+					<input type="hidden" name="admin_email" value="seo.er@mail.ru">
+					<input type="hidden" name="form_subject" value="Заявка с сайта - Автоподбор">
+					<!-- END Hidden Required Fields -->
+					<div class="head-form">
+						<span><i class="fa fa-phone"></i></span>
+						<h3>Обратный звонок</h3>
+						<p>Представьтесь, мы вам перезвоним.</p>
+					</div>
+					<div class="popupp-form-osnova">
+						<div class="input-form recq">
+							<input type="text" name="Имя" required placeholder="Ваше имя">
+						</div>
+						<div class="input-form recq">
+							<input class="wpcf7-tel" type="tel" name="Телефон" required placeholder="+7 (&nbsp;&nbsp;&nbsp;)&nbsp;&nbsp;&nbsp;&nbsp;-">
+						</div>
+						<div class="input-form">
+							<textarea name="textarea" id="Сообщение" cols="30" rows="10" placeholder="Сообщение"></textarea>
+						</div>
+						<div class="text-center">
+							<span class="popupp"><input type="submit" value="Отправить" class="submit"></span>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="libs/jquery/jquery.js"></script>
+	<script src="libs/fancybox/jquery.fancybox.pack.js"></script>
+	<script src="libs/mask/mask.js"></script>
+	<script src="libs/nav/nav.js"></script>
 	<script src="js/common.js"></script>
 </body>
 </html>
